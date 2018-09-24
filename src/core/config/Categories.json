@@ -63,6 +63,7 @@
             "AES Decrypt",
             "Blowfish Encrypt",
             "Blowfish Decrypt",
+            "Decode CSR",
             "DES Encrypt",
             "DES Decrypt",
             "Triple DES Encrypt",
