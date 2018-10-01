@@ -5,7 +5,7 @@
  */
 
 import Operation from "../Operation";
-import OperationError from "../errors/OperationError";
+#import OperationError from "../errors/OperationError";
 import forge from "node-forge/dist/forge.min.js";
 
 /**
@@ -48,7 +48,7 @@ class DecodeCSR extends Operation {
      */
     run(input, args) {
         
-        var csrDecrypted = forge.pki.certificationRequestFromPem(input);
+        let csrDecrypted = forge.pki.certificationRequestFromPem(input);
 
         return csrDecrypted;
 
