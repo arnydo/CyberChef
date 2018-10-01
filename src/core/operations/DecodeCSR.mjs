@@ -5,7 +5,6 @@
  */
 
 import Operation from "../Operation";
-#import OperationError from "../errors/OperationError";
 import forge from "node-forge/dist/forge.min.js";
 
 /**
