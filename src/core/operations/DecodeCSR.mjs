@@ -6,6 +6,7 @@
 
 import Operation from "../Operation";
 import forge from "node-forge/dist/forge.min.js";
+import CryptoJS from "crypto-js";
 
 /**
  * DecodeCSR operation
