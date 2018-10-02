@@ -6,7 +6,6 @@
 
 import Operation from "../Operation";
 import forge from "node-forge/dist/forge.min.js";
-import CryptoJS from "crypto-js";
 
 /**
  * DecodeCSR operation
@@ -47,11 +46,9 @@ class DecodeCSR extends Operation {
      * @returns {string}
      */
     run(input, args) {
-        
         const csrDecrypted = forge.pki.certificationRequestFromPem(input);
 
         return csrDecrypted;
-
     }
 
 }
