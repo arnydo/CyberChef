@@ -41,7 +41,7 @@ class DecodeCSR extends Operation {
     }
 
     /**
-     * @param {string} input
+     * @param {ArrayBuffer} input
      * @param {Object[]} args
      * @returns {string}
      */
