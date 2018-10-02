@@ -34,7 +34,7 @@ class DecodeCSR extends Operation {
      */
     run(input) {
         const csrDecrypted = forge.pki.certificationRequestFromPem(input);
-        return csrDecrypted.subject.getField('CN').value;
+        return csrDecrypted.subject.getField("CN").value;
     }
 
 }
