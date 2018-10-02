@@ -33,8 +33,14 @@ class DecodeCSR extends Operation {
      * @returns {string}
      */
     run(input) {
-        const csrDecrypted = forge.pki.certificationRequestFromPem(input);
-        return csrDecrypted.subject.getField("CN").value;
+        const csr = forge.pki.certificationRequestFromPem(input);
+        return `Version: ${csr.version}
+Subject:
+  Country:  ${csr.subject.getField("C").value}
+  State:    ${csr.subject.getField("S").value}
+  Location: ${csr.subject.getField("L").value}
+  EmailAddress: ${csr.subject.getField("emailAddress").value}
+  CommonName: ${csr.subject.getField("CN").value}`;
     }
 
 }
