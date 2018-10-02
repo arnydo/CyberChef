@@ -45,7 +45,6 @@ class DecodeCSR extends Operation {
      * @param {Object[]} args
      * @returns {Object[]}
      */
-    
     run(input, args) {
         const csrDecrypted = forge.pki.certificationRequestFromPem(input);
 
