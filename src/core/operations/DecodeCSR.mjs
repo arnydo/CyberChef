@@ -24,30 +24,18 @@ class DecodeCSR extends Operation {
         this.infoURL = "https://en.wikipedia.org/wiki/Certificate_signing_request";
         this.inputType = "string";
         this.outputType = "byteArray";
-        this.args = [
-            /* Example arguments. See the project wiki for full details.
-            {
-                name: "First arg",
-                type: "string",
-                value: "Don't Panic"
-            },
-            {
-                name: "Second arg",
-                type: "number",
-                value: 42
-            }
-            */
-        ];
+        this.args = [];
     }
 
     /**
-     * @param {ArrayBuffer} input
+     * @param {string} input
      * @param {Object[]} args
      * @returns {byteArray}
      */
-    run(input, args) {
+    run(input) {
         const csrDecrypted = forge.pki.certificationRequestFromPem(input);
-
+        console.log(input);
+        console.log(csrDecrypted);
         return csrDecrypted;
     }
 
